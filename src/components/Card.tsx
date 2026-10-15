@@ -1,10 +1,15 @@
-type Props = {};
+type Props = {
+  title: string;
+  imgSrc: string;
+  description: string;
+};
 
-export default function Card({}: Props) {
+export default function Card({ title, imgSrc, description }: Props) {
   return (
     <div className="card">
-      <h2>Susi</h2>
-      <img src="https://picsum.photos/200/300" alt="Hero" />
+      <h2>{title}</h2>
+      <img src={imgSrc} />
+      <p>{description}</p>
     </div>
   );
 }
